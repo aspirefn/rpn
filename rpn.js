@@ -9,23 +9,23 @@ if (typeof module !== 'undefined') {
 }
 
 var operators = {
-  '+': function(a, b) {	
+  'add': function(a, b) {	
     return b + a;
   },
-  '-': function(a, b) {
+  'subtract': function(a, b) {
     return b - a;
   },
-  '*': function(a, b) {
+  'multiply': function(a, b) {
     return b * a;
   },
-  '/': function(a, b) {
+  'divide': function(a, b) {
     return b / a;
   }
 };
 
 var entries = [];
 
-function receive (input) {
+function receive (input) { 
   if (typeof input === 'number') {
     entries.push(input);
   }

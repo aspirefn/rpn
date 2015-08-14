@@ -7,13 +7,17 @@ $(function() {
 
   $('.enter-button').click(function(e) {
     var entry = parseInt($('#entry').val());
-    receive(entry);
+    $.get('/input/' + entry, function(result) {
+      console.log(result);
+    });
     $('#entry').val('');
   });
 
   $('.operator-button').click(function(e) {
     var operator = $(e.target).attr('data-val');
-    var result = receive(operator);
-    $('#entry').val(result.toString());
+
+    $.get('/input/' + operator, function(result) {
+      $('#entry').val(result);
+    });
   });
 });
