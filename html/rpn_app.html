@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="RpnApp">
+
+<head>
+</head>
+
+<body>
+  <div ng-controller="CalcController">
+    <input type="text" ng-model="entry"></input>
+    <table>
+      <tr>
+        <td><button type="button" class="number-button btn btn-default" ng-click="onNumberClick('7')">7</button></td>
+        <td><button type="button" class="number-button btn btn-default" ng-click="onNumberClick('8')">8</button></td>
+        <td><button type="button" class="number-button btn btn-default" ng-click="onNumberClick('9')">9</button></td>
+        <td><button type="button" class="operator-button btn btn-default" ng-click="onOperatorClick('add')">+</button></td>
+      </tr>
+      <tr>
+        <td><button type="button" class="number-button btn btn-default" ng-click="onNumberClick('4')">4</button></td>
+        <td><button type="button" class="number-button btn btn-default" ng-click="onNumberClick('5')">5</button></td>
+        <td><button type="button" class="number-button btn btn-default" ng-click="onNumberClick('6')">6</button></td>
+        <td><button type="button" class="operator-button btn btn-default" ng-click="onOperatorClick('subtract')">-</button></td>
+      </tr>
+      <tr>
+        <td><button type="button" class="number-button btn btn-default" ng-click="onNumberClick('1')">1</button></td>
+        <td><button type="button" class="number-button btn btn-default" ng-click="onNumberClick('2')">2</button></td>
+        <td><button type="button" class="number-button btn btn-default" ng-click="onNumberClick('3')">3</button></td>
+        <td><button type="button" class="operator-button btn btn-default" ng-click="onOperatorClick('multiply')">*</button></td>
+      </tr>
+      <tr>
+        <td><button type="button" class="number-button btn btn-default" ng-click="onNumberClick('0')">0</button></td>
+        <td><button type="button" class="number-button btn btn-default" ng-click="onNumberClick('.')">.</button></td>
+        <td><button type="button" class="enter-button btn btn-default" ng-click="onEnterClick()"</button>Ent</td>
+        <td><button type="button" class="operator-button btn btn-default" ng-click="onOperatorClick('divide')">/</button></td>
+      </tr>
+    </table>
+  </div>
+  <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+  <script src="/js/rpn_app.js"></script>
+</body>
+</html>

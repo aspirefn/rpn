@@ -15,7 +15,8 @@ app.get(/^\/input\/(add|subtract|multiply|divide)$/, function(req, res) {
   res.send(result.toString());
 });
 
-app.use('/', express.static('./static'));
+app.use('/', express.static('./html'));
+app.use('/js', express.static('./js'));
 
 app.listen(8080);
 
